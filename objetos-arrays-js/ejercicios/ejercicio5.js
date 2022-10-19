@@ -23,18 +23,18 @@ const squirtle = {
 }
 
 
-
-    
-
-
 const resistsType = ()=>{
-    if (type === water) {
-        console.log(' myVar is equal to true');
-      } else {
-        console.log(' myVar is not equal to true');
-      }
-    return type
-}
+    ej5 = { 
 
+      resistenciasTipos: squirtle.modifiers.resistances,
+      tipo: squirtle.type,
+    }
+    return ej5
+    if (resistenciasTipos===water){
+        return True
+    }else{
+        return False
+    }
+}
 const resist = resistsType();
 console.log(resist)

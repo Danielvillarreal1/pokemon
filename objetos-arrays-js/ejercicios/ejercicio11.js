@@ -25,16 +25,10 @@ const squirtle = {
 
 const removeMove = ()=>{
     const ej11 = {
-        
-        ...squirtle,
-        // moves: [...squirtle.moves, moves.pop]
-
-
-        //moves: [{...squirtle.moves, Tackle: "lllf"}]
-  
-     
+                ...squirtle,
+                movi: squirtle.moves
     };
-    ej11.squirtClone.moves.pop()
+    ej11.movi.pop()
     return ej11
 
 }
