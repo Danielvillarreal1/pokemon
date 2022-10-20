@@ -24,17 +24,19 @@ const squirtle = {
 
 
 const resistsType = ()=>{
-    ej5 = { 
+    const  ej5 =squirtle.modifiers.resistances
+    {
+     for (var i = 0; i < squirtle.modifiers.resistances.length; i++) {
+        resistenciasTipos= squirtle.modifiers.resistances
+        tipo= squirtle.type
+        
+        if (tipo == resistenciasTipos[i]) {
+            console.log(resistenciasTipos[i]  + "= " + "True");
+        } else console.log(resistenciasTipos[i]  + "= "+  "False");
+    }
 
-      resistenciasTipos: squirtle.modifiers.resistances,
-      tipo: squirtle.type,
     }
     return ej5
-    if (resistenciasTipos===water){
-        return True
-    }else{
-        return False
-    }
 }
 const resist = resistsType();
 console.log(resist)
