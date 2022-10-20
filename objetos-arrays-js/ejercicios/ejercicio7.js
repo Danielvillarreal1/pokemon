@@ -47,28 +47,29 @@ const squirtle = {
     }
 }
 
-
+// Es débil contra
 const isWeakAgainst = ()=>{
     
-    const  ej7 = { 
+    const  ej7 = {attacker:'squirtle', attacked:'pukachu'}
+    { 
+        attacker= squirtle.modifiers.weakness, 
+        attacked= pikachu.modifiers.weakness
+        //attacker= squirtle.type
        
-        attacker: squirtle.name,
-        attacked: pikachu.name,
         
-
-        // if(attacker == attacked) {
-        //     console.log(attacker  + "True");
-        // } else {
-        //     console.log(attacker+  "False");
-        // }
-        
+        if(attacker = attacked) {
+            console.log(attacked + ":" + "True");
+        } else{
+            console.log(attacked + ":" + "False");
+        }
     }
-    // attackerType: squirtle.type
-    // attackedType: charmander.modifiers.weakness
- 
     
     return ej7
 }
+   
+ 
+
+
 const Weak = isWeakAgainst();
 console.log(Weak)
 

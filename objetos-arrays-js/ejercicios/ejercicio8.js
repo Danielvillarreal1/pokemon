@@ -3,13 +3,6 @@
 // pokémon atacado es resistente al tipo de pokémon que lo ataca
 
 
-const getPikachu = () => {
-    return {
-        name: "Pikacku",
-        type: "electric",
-        // ...
-    }
-}
 const bulbasaur = {
     name: "Bulbasaur",
     type: "grass",
@@ -52,70 +45,32 @@ const charmander = {
         "resistances": ["fire", "ice", "grass", "steal"]
     }
 }
-const squirtle = {
-    name: "Squirtle",
-    type: "water",
-    ability: {
-        "primary": "Torrent",
-        "hidden": "Rain Dish"
-    },
-    stats: {
-        hp: 44,
-        attack: 48,
-        deffense: 50,
-        speed: 43
-    },
-    moves: [
-        "Tackle", "Tail Whip", "Water Gun", "Hydro Pump"
-    ],
-    modifiers: {
-        "weakness": ["electric", "grass"],
-        "resistances": ["water", "fire", "ice", "steel"]
+
+// es fuerte en contra
+
+const isWeakAgainst = ()=>{
+    
+    const  ej7 = {attacker:'Charmander', attacked:'Bulbasaur'}
+    { 
+        attacker= charmander.stats.attack, 
+        attacked= bulbasaur.stats.attack
+       // attacker= squirtle.type
+       
+        
+        if(attacker > attacked) {
+            console.log(attacked + ":" + "True");
+        } else{
+            console.log(attacked + ":" + "False");
+        }
     }
+    
+    return ej7
 }
-const pikachu = {
-    name: "Pikachu",
-    type: "electric",
-    ability: {
-        "primary": "Static",
-        "hidden": "Lightning rod"
-    },
-    stats: {
-        hp: 35,
-        attack: 55,
-        deffense: 40,
-        speed: 90
-    },
-    moves: [
-        "Quick Attack", "Volt Tackle", "Iron Tail", "Thunderbolt"
-    ],
-    modifiers: {
-        "weakness": ["ground"],
-        "resistances": ["electric", "flying", "water", "steel"]
-    }
-}
+   
+ 
 
 
+const Weak = isWeakAgainst();
+console.log(Weak)
 
-// isWeakAgainst()
 
-function isWeakAgainst() {
-    const ej7 = {
-      pokemons: { attacker: squirtle.name, attacked: charmander.name },
-      // attacker: squirtle.name,
-      // attacked: charmander.name,
-      attackerType: squirtle.type,
-      attackedType: charmander.modifiers.weakness,
-    };
-    return ej7;
-  }
-  
-  let resultado7 = isWeakAgainst();
-  console.log(resultado7);
-  
-  if (
-    resultado7.attackedType.find((element) => element === resultado7.attackerType)
-  ) {
-    console.log("True");
-  } else console.log("False");
-  
