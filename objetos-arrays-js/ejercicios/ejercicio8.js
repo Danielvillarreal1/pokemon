@@ -48,29 +48,54 @@ const charmander = {
 
 // es fuerte en contra
 
-const isWeakAgainst = ()=>{
+
+function isWeakAgainst(pokemon1, pokemon2) {
+    let weakness = getWeaknesses(pokemon2);
+    const pokemons = { attacker: pokemon1.name, attacked: pokemon2.name };
+    console.log(pokemons);
+    if (weakness.find((weak) => weak === getType(pokemon1))) {
+      return true;
+    } else return false;
+  }
+  let Weakness = isWeakAgainst(squirtle, charmander);
+  console.log(Weakness);
+
+
+
+
+
+// const isWeakAgainst = (attacker, attacked)=>{
     
-    const  ej7 = {attacker:'Charmander', attacked:'Bulbasaur'}
-    { 
-        attacker= charmander.stats.attack, 
-        attacked= bulbasaur.stats.attack
-       // attacker= squirtle.type
+//     const att=  {attacker:'Charmander', attacked:'Bulbasaur'}
+    
+    
+//        attacker=  bulbasaur.modifiers.resistances
+//        attacked= charmander.modifiers.resistances
        
-        
-        if(attacker > attacked) {
-            console.log(attacked + ":" + "True");
-        } else{
-            console.log(attacked + ":" + "False");
-        }
-    }
+//        if(attacked.find((fuerte) => fuerte === 'electric')) {
+//            return true;
+//        }else return false;
+//    }
+
+// const Weak = isWeakAgainst();
+// console.log(Weak)
+
+
+
+
+// const isWeakAgainst = ()=>{
     
-    return ej7
-}
-   
- 
-
-
-const Weak = isWeakAgainst();
-console.log(Weak)
-
-
+//     const  ej8 = {attacker:'Charmander', attacked:'Bulbasaur'}
+//     { 
+//         attacker= charmander.stats.attack, 
+//         attacked= bulbasaur.stats.attack
+        
+//         if(attacker > attacked) {
+//             console.log(attacked + ":" + "True");
+//         } else{
+//             console.log(attacked + ":" + "False");
+//         }
+//     }
+    
+//     return ej8
+// }
