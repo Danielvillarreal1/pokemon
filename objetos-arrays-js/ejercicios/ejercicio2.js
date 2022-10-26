@@ -1,22 +1,10 @@
-var squirtle = require('../data/pikachu.json')
+const getPokemon = require("../ejercicios/ejercicio0.js");
+const squirtle = getPokemon("squirtle");
 
 // Crear una función getPrimaryAbility que tome como argumento un pokémon y devuelva la habilidad primaria
-
 
 function getPrimaryAbility(pokemon) {
     return pokemon.ability.primary;
 }
-let moves = getPrimaryAbility(squirtle[1]);
+let moves = getPrimaryAbility(squirtle);
 console.log(moves);
-
-
-
-
-// function getPrimaryAbility (){
-//     const ej2 = {
-//         primaryAbility: squirtle.ability.primary
-//     }
-//     return ej2;
-// }
-// let ability = getPrimaryAbility()
-// console.log(ability)

@@ -1,9 +1,12 @@
-// import pikachu from "../data/pikachu.json"
+const getPokemon = require("../ejercicios/ejercicio0.js");
+const pikachu = getPokemon("pikachu");
 
-var pikachu = require('../data/pikachu.json')
+// Crear una función getMoves que tome como argumento un pokémon y devuelva la lista de movimientos
 
 function getMoves(pokemon) {
     return pokemon.moves;
-}
-let moves = getMoves(pikachu[0]);
+  }
+let moves = getMoves(pikachu);
 console.log(moves);
+
+

@@ -9,17 +9,13 @@ module.exports = function getPokemon(namePokemon){
     switch (namePokemon) {
     case "pikachu":
         return pokemons[0]
-        break;
     case "squirtle":
         return pokemons[1]
-        break;
     case "charmander":
         return pokemons[2]
-        break;
+      
     case "bulbasaur":
         return pokemons[3]
-        break;
-    
     }
 }
 

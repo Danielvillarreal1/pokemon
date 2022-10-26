@@ -1,4 +1,5 @@
-var charmander = require('../data/pikachu.json')
+const getPokemon = require("../ejercicios/ejercicio0.js");
+const charmander = getPokemon("charmander");
 
 // Crear una función getWeaknesses que tome como argumento un pokémon y devuelva la lista de tipos 
 //contra los que es débil
@@ -6,5 +7,5 @@ var charmander = require('../data/pikachu.json')
 function getWeaknesses(pokemon) {
         return pokemon.modifiers.weakness;
 }
-const tipos = getWeaknesses(charmander[2])
+const tipos = getWeaknesses(charmander)
 console.log(tipos)
