@@ -5,28 +5,38 @@ const squirtle = getPokemon('squirtle')
 //pokémon es resistente a dicho ataque. El movimiento es un objeto que contiene nombre del mismo y tipo,
 // p. ej.: { name: "Rain dance", type: "water" }
 
-function getResistances(pokemon1){
-    return pokemon1.modifiers.resistances;
+function resistsMove(poke, movimiento){
+    movimientos = poke.moves
+    console.log(movimientos)
+
+    if(movimientos.find((mov) => mov === movimiento)){
+        return true;
+    }else return false;
 }
-function getMoves(pokemon2) {
-    return pokemon2.moves;
-  }
+console.log(resistsMove(pikachu, movimienot='Quick Attack'))
+
+// function getResistances(pokemon1){
+//     return pokemon1.modifiers.resistances;
+// }
+// function getMoves(pokemon2) {
+//     return pokemon2.moves;
+//   }
   
-function getType(pokemon2) {
-    return pokemon2.type;
-  }
+// function getType(pokemon2) {
+//     return pokemon2.type;
+//   }
   
-// true. name: Tackle Type: water
-function resistsMove(pokemon1, pokemon2) {
-    let resistances = getResistances(pokemon1);
-    let move ="name: " + getMoves(pokemon2) + " " + "Type: " + getType(pokemon2);
+// // true. name: Tackle Type: water
+// function resistsMove(pokemon1, pokemon2) {
+//     let resistances = getResistances(pokemon1);
+//     let move ="name: " + getMoves(pokemon2) + " " + "Type: " + getType(pokemon2);
     
-    if (resistances.find((resistance) => resistance === getType(pokemon2))) {
-      return true + ". " + move;
-    } else return false + ". " + move;
-  }
+//     if (resistances.find((resistance) => resistance === getType(pokemon2))) {
+//       return true + ". " + move;
+//     } else return false + ". " + move;
+//   }
   
-  console.log(resistsMove(pikachu, squirtle));
+//   console.log(resistsMove(pikachu, squirtle));
   
 
 

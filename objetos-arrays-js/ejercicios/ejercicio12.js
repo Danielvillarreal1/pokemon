@@ -10,100 +10,52 @@ donde cada valor es un pokémon (p.ej. { attacker: pikachu, attacked: squirtle }
 1, si no es débil ni resistente
 */
 
-function getResistances(pokemon){
-    return pokemon.modifiers.resistances;
+
+function getAttackModifier() {
+  const pokemons = { attacker: bulbasaur.name, attacked: pikachu.name };
+  console.log(pokemons);
+  resistente = pikachu.modifiers.resistances
+  tipo = bulbasaur.type
+  weakness = pikachu.modifiers.weakness
+
+  if (resistente.find((resi) => resi === tipo)) {
+    return 0.5;
+  } else if (weakness.find((weak) => weak === tipo)) {
+    return 2;
+  } else return 1;
 }
-function getType(pokemon) {
-    return pokemon.type;
-  }
-function getWeaknesses(pokemon) {
-    return pokemon.modifiers.weakness;
-}
 
-// obtener modificador de ataque
+console.log(getAttackModifier(bulbasaur, pikachu));
 
-function getAttackModifier(pokemon1, pokemon2) {
-    const pokemons = { attacker: pokemon1.name, attacked: pokemon2.name };
-    console.log(pokemons);
-    if (
-      getResistances(pokemon2).find(
-        (resistance) => resistance === getType(pokemon1)
-      )
-    ) {
-      return 0.5;
-    } else if (
-      getWeaknesses(pokemon2).find((element) => element === getType(pokemon1))
-    ) {
-      return 2;
-    } else return 1;
-  }
-  
-  console.log(getAttackModifier(bulbasaur, pikachu));
-
-
-  module.exports = {getAttackModifier};
-
-// const getAttackModifier = ()=>{
-
-//     const  ej12 = {attacker:'squirtle', attacked:'charmander'}
-//     {
-
-//         attackedResist= charmander.modifiers.resistances,
-//         attackedWeak= charmander.modifiers.weakness,
-//         attackerType= squirtle.type
-
-//         //["fire", "ice", "grass", "steal"]
-
-//         for (var i = 0; i < charmander.modifiers.resistances.length; i++) {
-//             if(attackedResist[i] === attackerType[i] ) {
-//                 console.log(attackerType[i] + "0.5")}
-
-//                 //  ["water", "ground", "rock"]
-//             else if(attackedWeak[i] === attackerType[i] ) {
-//                 console.log(attackerType[i] + "2")
-
-//             } else{
-//                 console.log("1");
-//             }
-//     }
-//     console.log(rdo)
+// function getResistances(pokemon){
+//     return pokemon.modifiers.resistances;
+// }
+// function getType(pokemon) {
+//     return pokemon.type;
+//   }
+// function getWeaknesses(pokemon) {
+//     return pokemon.modifiers.weakness;
 // }
 
-//     return ej12
-// }
+// // obtener modificador de ataque
 
-// const Weak = getAttackModifier();
-// console.log(Weak)
-
-// function modifier(props) {
+// function getAttackModifier(pokemon1, pokemon2) {
+//     const pokemons = { attacker: pokemon1.name, attacked: pokemon2.name };
+//     console.log(pokemons);
 //     if (
-//       resultado12.attackedResist.find(
-//         (element) => element === resultado12.attackerType
+//       getResistances(pokemon2).find(
+//         (resistance) => resistance === getType(pokemon1)
 //       )
 //     ) {
-//       console.log("0,5");
+//       return 0.5;
 //     } else if (
-//       resultado12.attackedWeak.find(
-//         (element) => element === resultado12.attackerType
-//       )
+//       getWeaknesses(pokemon2).find((element) => element === getType(pokemon1))
 //     ) {
-//       console.log("2");
-//     } else console.log("1");
-//     return props;
-
-// //["fire", "ice", "grass", "steal"]
-// if(attackedResist[0] || attackedResist[1]|| attackedResist[2] || attackedResist[3] === attackerType[0] || attackerType[1] || attackerType[2] ) {
-//     console.log(attackerType + "0.5")
-// }
-//     //  ["water", "ground", "rock"]
-// else if(attackedWeak[0] || attackedWeak[1] || attackedWeak[2] === attackerType[0] || attackerType[1] || attackerType[2] ) {
-//     console.log(attackerType + "2")
-
-// } else{
-//     console.log("1");
-// }
+//       return 2;
+//     } else return 1;
+//   }
+  
+//   console.log(getAttackModifier(bulbasaur, pikachu));
 
 
-// ejercicio: 12 getAttackModifier
-// { attacker: 'Bulbasaur', attacked: 'Pikachu' }
-// 1
+module.exports = {getAttackModifier};
