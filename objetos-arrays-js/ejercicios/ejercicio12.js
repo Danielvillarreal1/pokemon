@@ -27,35 +27,6 @@ function getAttackModifier() {
 
 console.log(getAttackModifier(bulbasaur, pikachu));
 
-// function getResistances(pokemon){
-//     return pokemon.modifiers.resistances;
-// }
-// function getType(pokemon) {
-//     return pokemon.type;
-//   }
-// function getWeaknesses(pokemon) {
-//     return pokemon.modifiers.weakness;
-// }
-
-// // obtener modificador de ataque
-
-// function getAttackModifier(pokemon1, pokemon2) {
-//     const pokemons = { attacker: pokemon1.name, attacked: pokemon2.name };
-//     console.log(pokemons);
-//     if (
-//       getResistances(pokemon2).find(
-//         (resistance) => resistance === getType(pokemon1)
-//       )
-//     ) {
-//       return 0.5;
-//     } else if (
-//       getWeaknesses(pokemon2).find((element) => element === getType(pokemon1))
-//     ) {
-//       return 2;
-//     } else return 1;
-//   }
-  
-//   console.log(getAttackModifier(bulbasaur, pikachu));
 
 
 module.exports = {getAttackModifier};

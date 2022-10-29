@@ -3,8 +3,7 @@ const squirtle = getPokemon("squirtle");
 
 // Crear una función getPrimaryAbility que tome como argumento un pokémon y devuelva la habilidad primaria
 
-function getPrimaryAbility(pokemon) {
-    return pokemon.ability.primary;
+function getPrimaryAbility(poke){
+    return poke.ability.primary
 }
-let moves = getPrimaryAbility(squirtle);
-console.log(moves);
+console.log(getPrimaryAbility(squirtle))

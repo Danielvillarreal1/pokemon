@@ -18,6 +18,7 @@ function resistsType(poke, tipo){
 console.log(resistsType(squirtle, tipo='steel' ))
 
 
+
 // function getResistances(pokemon){
 //     return pokemon.modifiers.resistances;
 // }

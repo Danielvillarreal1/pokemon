@@ -39,19 +39,3 @@ function calculateDamage() {
 // 0.5*48(48/43).2
 
 
-// function calculateDamage(pokemon1, pokemon2) {
-//     const calculateDMG = {
-//       attack: pokemon1.stats.attack,
-//       defense: pokemon2.stats.deffense,
-//       modifier: Math.round(
-//         0.5 *
-//           pokemon1.stats.attack *
-//           (pokemon1.stats.attack / pokemon2.stats.deffense) *
-//           getAttackModifier(pokemon1, pokemon2)
-//       ),
-//     };
-//     return calculateDMG;
-//   }
-  
-//   console.log(calculateDamage(squirtle, charmander));
-

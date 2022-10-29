@@ -24,6 +24,8 @@ se debe agregar It's not very effective!, por ejemplo:
 
 */
 
+
+
 function getAttackLog() {
     const battle = {
       attacker: squirtle.name,
@@ -41,28 +43,3 @@ function getAttackLog() {
   console.log(
     `${battle.attacker} used ${battle.move}! ${battle.attacked} lost ${battle.damage} HP! It's not very effective!`
   );
-
-
-
-  
-
-// function getAttackLog(pokemon1, pokemon2) {
-//     const battle = {
-//       attacker: pokemon1.name,
-//       attacked: pokemon2.name,
-//       move: pokemon1.moves[2],
-//       damage: "12",
-//       modifier: "weak",
-//     };
-//     return battle;
-//   }
-//   let battle = getAttackLog(squirtle, pikachu);
-  
-//   console.log(battle);
-  
-//   console.log(
-//     `${battle.attacker} used ${battle.move}! ${battle.attacked} lost ${battle.damage} HP! It's not very effective!`
-//   );
-
-
-  
